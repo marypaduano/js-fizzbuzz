@@ -1,21 +1,24 @@
 console.log('bonus')
 
-let container = document.getElementById ('container')
+let result
+
+let boxElement = document.getElementById ('container')
 
 for (let i = 1; i <= 100; i++) {
     if (i % 15 === 0 && i % 3 === 0){
-        console.log("FizzBuzz")
-        container.innerHTML += 'FizzBuzz'
+        result ='FizzBuzz'
     }
     else if (i % 3 === 0){
-        console.log("Fizz")
-        container.innerHTML += 'Fizz'
+        result ='Fizz'
     }
     else if (i % 5 === 0){ 
-        console.log("Buzz")
-        container.innerHTML += 'Buzz'
+        result ='Buzz'
     }
-    else console.log(i)
-    container.innerHTML += (i)
+    else { 
+        result = i
+    }
+
+    console.log(result)
+    boxElement.innerHTML += '<div>' + result + '</div>'
 
 }
